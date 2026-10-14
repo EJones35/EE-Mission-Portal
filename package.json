@@ -1,0 +1,21 @@
+{
+  "name": "ee-mission-portal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "EE Mission Portal",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/server/index.js && node --check public/app.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply scratch-portal-db --local",
+    "db:remote": "wrangler d1 migrations apply scratch-portal-db --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
